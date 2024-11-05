@@ -1,0 +1,8 @@
+# Ignore Xcode user interface and breakpoint settings
+*.xcuserstate
+*.xcbkptlist
+
+# Ignore general Xcode project files
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/
