@@ -10,7 +10,7 @@ import SwiftUI
 struct AddExpenseView: View {
     @ObservedObject var viewModel: AddExpenseViewModel
     @ObservedObject var listViewModel: ExpenseListViewModel
-    @Environment(\.modelContext) private var modelContext  // Access the model context
+    @Environment(\.modelContext) private var modelContext  // Get the model context
 
     private let categories = ["Entertainment", "Food", "Utilities", "Transport", "Health", "Other"]
 
@@ -29,7 +29,7 @@ struct AddExpenseView: View {
             DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
 
             Button("Save Expense") {
-                viewModel.saveExpense(to: listViewModel, using: modelContext)  // Pass model context
+                viewModel.saveExpense(to: listViewModel, using: modelContext)  // Save with context
             }
         }
         .navigationTitle("Add Expense")

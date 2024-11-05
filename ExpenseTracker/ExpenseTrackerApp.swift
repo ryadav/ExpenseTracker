@@ -11,11 +11,11 @@ import SwiftData
 @main
 struct ExpenseTrackerApp: App {
     var body: some Scene {
-            WindowGroup {
-                ContentView()
-                    .modelContainer(for: [Expense.self])
-            }
+        WindowGroup {
+            ContentView()
+                .modelContainer(for: Expense.self)  // Set up model container
         }
+    }
 }
 
 
@@ -40,6 +40,5 @@ struct ContentView: View {
                     Label("Summary", systemImage: "chart.pie")
                 }
         }
-        .modelContainer(for: Expense.self)  // Attach ModelContainer for Expense
     }
 }

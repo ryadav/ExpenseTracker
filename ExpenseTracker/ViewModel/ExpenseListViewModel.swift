@@ -12,24 +12,18 @@ class ExpenseListViewModel: ObservableObject {
     @Published var expenses: [Expense] = []
     
     func fetchExpenses(using context: ModelContext) {
-           // Clear any previous data if needed (only for demonstration)
-           self.expenses.removeAll()
-
-           // Create and insert sample data within the context
-           let sampleExpenses = [
-               Expense(date: Date(), category: "Food", amount: 10.5),
-               Expense(date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!, category: "Utilities", amount: 45.75),
-               Expense(date: Calendar.current.date(byAdding: .month, value: -1, to: Date())!, category: "Entertainment", amount: 25.0)
-           ]
+           // Create a FetchDescriptor for the Expense model
+           let fetchDescriptor = FetchDescriptor<Expense>()
            
-           for expense in sampleExpenses {
-               context.insert(expense)
-               self.expenses.append(expense)
+           // Fetch all Expense items using the descriptor
+           if let fetchedExpenses = try? context.fetch(fetchDescriptor) {
+               self.expenses = fetchedExpenses
+           } else {
+               self.expenses = []  // Set to empty if fetch fails
            }
        }
     
     func groupExpenses(by component: Calendar.Component) -> [String: [Expense]] {
-        let calendar = Calendar.current
         var groupedExpenses = [String: [Expense]]()
         
         for expense in expenses {

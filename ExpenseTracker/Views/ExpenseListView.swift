@@ -39,7 +39,7 @@ struct ExpenseListView: View {
                 }
                 .navigationTitle("Expenses")
                 .onAppear {
-                    viewModel.fetchExpenses(using: modelContext) 
+                    viewModel.fetchExpenses(using: modelContext)
                 }
             }
         }
