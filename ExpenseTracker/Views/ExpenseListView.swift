@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ExpenseListView: View {
     @StateObject var viewModel = ExpenseListViewModel()
-    @State private var selectedGrouping: Calendar.Component = .day  // Track the selected grouping
-    @Environment(\.modelContext) private var modelContext 
+    @State private var selectedGrouping: Calendar.Component = .day
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         NavigationView {

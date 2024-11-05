@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct SummaryView: View {
-    @ObservedObject var viewModel: ExpenseListViewModel  // Observe the ExpenseListViewModel for changes
-    @State private var selectedGrouping: Calendar.Component = .month  // Select grouping for summary (e.g., day, month, year)
-
+    @ObservedObject var viewModel: ExpenseListViewModel
+    @State private var selectedGrouping: Calendar.Component = .month
+    
     var body: some View {
         VStack {
-            // Picker to select grouping option (e.g., day, month, year)
             Picker("Group By", selection: $selectedGrouping) {
                 Text("Day").tag(Calendar.Component.day)
                 Text("Month").tag(Calendar.Component.month)
@@ -22,12 +21,10 @@ struct SummaryView: View {
             .pickerStyle(SegmentedPickerStyle())
             .padding()
             
-            // Display total expenses for the selected grouping
             Text("Total \(groupingName(for: selectedGrouping)) Expenses: \(viewModel.calculateTotal(for: selectedGrouping), specifier: "%.2f")")
                 .font(.title)
                 .padding()
             
-            // Additional UI, such as a chart or breakdown by category
             List {
                 ForEach(viewModel.groupExpenses(by: selectedGrouping).sorted(by: { $0.key > $1.key }), id: \.key) { (section, expenses) in
                     Section(header: Text(section)) {
@@ -46,7 +43,6 @@ struct SummaryView: View {
         .navigationTitle("Summary")
     }
     
-    // Helper function to provide a name for the selected grouping
     private func groupingName(for component: Calendar.Component) -> String {
         switch component {
         case .day:

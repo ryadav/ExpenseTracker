@@ -20,6 +20,7 @@
 		18D163652CDA0407004DEA09 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163642CDA0407004DEA09 /* ExpenseListView.swift */; };
 		18D163672CDA044A004DEA09 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163662CDA044A004DEA09 /* AddExpenseView.swift */; };
 		18D163692CDA046F004DEA09 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163682CDA046F004DEA09 /* SummaryView.swift */; };
+		18D163752CDA2F09004DEA09 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163742CDA2F09004DEA09 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		18D163642CDA0407004DEA09 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		18D163662CDA044A004DEA09 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		18D163682CDA046F004DEA09 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		18D163742CDA2F09004DEA09 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				18D1635A2CDA021F004DEA09 /* Model */,
 				18D1635B2CDA0227004DEA09 /* ViewModel */,
 				18D1635C2CDA0233004DEA09 /* Views */,
+				18D163722CDA2EE6004DEA09 /* Utility */,
 				18D1635D2CDA0239004DEA09 /* Resources */,
 				18D1632E2CDA01A6004DEA09 /* ExpenseTrackerApp.swift */,
 				18D163362CDA01A9004DEA09 /* Preview Content */,
@@ -175,6 +178,14 @@
 				18D163342CDA01A9004DEA09 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		18D163722CDA2EE6004DEA09 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				18D163742CDA2F09004DEA09 /* DateFormatter.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D163752CDA2F09004DEA09 /* DateFormatter.swift in Sources */,
 				18D163612CDA038E004DEA09 /* ExpenseListViewModel.swift in Sources */,
 				18D1635F2CDA0365004DEA09 /* ExpenseViewModel.swift in Sources */,
 				18D163672CDA044A004DEA09 /* AddExpenseView.swift in Sources */,

@@ -10,10 +10,10 @@ import SwiftUI
 struct AddExpenseView: View {
     @ObservedObject var viewModel: AddExpenseViewModel
     @ObservedObject var listViewModel: ExpenseListViewModel
-    @Environment(\.modelContext) private var modelContext  // Get the model context
-
+    @Environment(\.modelContext) private var modelContext
+    
     private let categories = ["Entertainment", "Food", "Utilities", "Transport", "Health", "Other"]
-
+    
     var body: some View {
         Form {
             Picker("Category", selection: $viewModel.category) {
@@ -27,9 +27,9 @@ struct AddExpenseView: View {
                 .keyboardType(.decimalPad)
             
             DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
-
+            
             Button("Save Expense") {
-                viewModel.saveExpense(to: listViewModel, using: modelContext)  // Save with context
+                viewModel.saveExpense(to: listViewModel, using: modelContext)
             }
         }
         .navigationTitle("Add Expense")

@@ -5,24 +5,24 @@
 //  Created by Apple on 05/11/24.
 //
 
-import SwiftUI
+import Foundation
 import SwiftData
+import SwiftUI
 
 @main
 struct ExpenseTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: Expense.self)  // Set up model container
+                .modelContainer(for: Expense.self)
         }
     }
 }
 
-
 struct ContentView: View {
     @StateObject private var listViewModel = ExpenseListViewModel()
     @StateObject private var addExpenseViewModel = AddExpenseViewModel()
-
+    
     var body: some View {
         TabView {
             ExpenseListView(viewModel: listViewModel)
