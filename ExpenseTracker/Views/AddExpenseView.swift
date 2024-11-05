@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct AddExpenseView: View {
-    @ObservedObject var viewModel: AddExpenseViewModel  // Use AddExpenseViewModel instead of ExpenseListViewModel
-    @ObservedObject var listViewModel: ExpenseListViewModel  // Reference to listViewModel for saving
-    
+    @ObservedObject var viewModel: AddExpenseViewModel
+    @ObservedObject var listViewModel: ExpenseListViewModel
+    @Environment(\.modelContext) private var modelContext  // Access the model context
+
+    private let categories = ["Entertainment", "Food", "Utilities", "Transport", "Health", "Other"]
+
     var body: some View {
         Form {
-            TextField("Category", text: $viewModel.category)
+            Picker("Category", selection: $viewModel.category) {
+                ForEach(categories, id: \.self) { category in
+                    Text(category).tag(category)
+                }
+            }
+            .pickerStyle(MenuPickerStyle())
+            
             TextField("Amount", text: $viewModel.amount)
                 .keyboardType(.decimalPad)
+            
             DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
 
             Button("Save Expense") {
-                viewModel.saveExpense(to: listViewModel)  // Save expense to the list view model
+                viewModel.saveExpense(to: listViewModel, using: modelContext)  // Pass model context
             }
         }
         .navigationTitle("Add Expense")

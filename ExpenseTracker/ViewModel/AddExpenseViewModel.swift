@@ -13,11 +13,22 @@ class AddExpenseViewModel: ObservableObject {
     @Published var amount: String = ""
     @Published var date: Date = Date()
     
-    func saveExpense(to listViewModel: ExpenseListViewModel) {
-        guard let amountValue = Double(amount) else { return }
+    func saveExpense(to listViewModel: ExpenseListViewModel, using context: ModelContext) {
+        // Validate the amount string and convert it to a Double
+        guard let amountValue = Double(amount), !category.isEmpty else { return }
+        
+        // Create a new Expense object
         let newExpense = Expense(date: date, category: category, amount: amountValue)
         
-        // Add the new expense to the list view model's expenses
+        // Insert the new expense into the model context
+        context.insert(newExpense)
+        
+        // Update the list view model with the new expense
         listViewModel.expenses.append(newExpense)
+        
+        // Reset the input fields after saving
+        category = ""
+        amount = ""
+        date = Date()
     }
 }
