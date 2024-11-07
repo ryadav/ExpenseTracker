@@ -9,7 +9,7 @@ import SwiftData
 import Foundation
 
 class AddExpenseViewModel: ObservableObject {
-    @Published var category: String = ""
+    @Published var category: String = "Entertainment"
     @Published var amount: String = ""
     @Published var date: Date = Date()
     
@@ -20,7 +20,7 @@ class AddExpenseViewModel: ObservableObject {
         context.insert(newExpense)
         listViewModel.fetchExpenses(using: context)
         
-        category = ""
+        category = "Entertainment"
         amount = ""
         date = Date()
     }

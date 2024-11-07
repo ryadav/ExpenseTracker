@@ -21,16 +21,20 @@ struct AddExpenseView: View {
                     Text(category).tag(category)
                 }
             }
-            .pickerStyle(MenuPickerStyle())
+            .pickerStyle(MenuPickerStyle()) // Change to WheelPickerStyle for testing
+            .accessibilityIdentifier("CategoryPicker")
             
             TextField("Amount", text: $viewModel.amount)
                 .keyboardType(.decimalPad)
+                .accessibilityIdentifier("AmountTextField")
             
             DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
+                .accessibilityIdentifier("DatePicker")
             
             Button("Save Expense") {
                 viewModel.saveExpense(to: listViewModel, using: modelContext)
             }
+            .accessibilityIdentifier("SaveExpenseButton")
         }
         .navigationTitle("Add Expense")
     }

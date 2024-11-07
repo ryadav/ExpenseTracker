@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C2AC432CDB7F830001DED2 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AC422CDB7F830001DED2 /* PieChartView.swift */; };
+		18C2AC452CDC9F420001DED2 /* ExpenseListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AC442CDC9F420001DED2 /* ExpenseListViewModelTests.swift */; };
+		18C2AC472CDC9F9D0001DED2 /* AddExpenseViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AC462CDC9F9D0001DED2 /* AddExpenseViewModelTests.swift */; };
 		18D1632F2CDA01A6004DEA09 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1632E2CDA01A6004DEA09 /* ExpenseTrackerApp.swift */; };
 		18D163332CDA01A6004DEA09 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163322CDA01A6004DEA09 /* Expense.swift */; };
 		18D163352CDA01A9004DEA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D163342CDA01A9004DEA09 /* Assets.xcassets */; };
@@ -14,7 +17,6 @@
 		18D163422CDA01A9004DEA09 /* ExpenseTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163412CDA01A9004DEA09 /* ExpenseTrackerTests.swift */; };
 		18D1634C2CDA01AA004DEA09 /* ExpenseTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1634B2CDA01AA004DEA09 /* ExpenseTrackerUITests.swift */; };
 		18D1634E2CDA01AA004DEA09 /* ExpenseTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1634D2CDA01AA004DEA09 /* ExpenseTrackerUITestsLaunchTests.swift */; };
-		18D1635F2CDA0365004DEA09 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1635E2CDA0365004DEA09 /* ExpenseViewModel.swift */; };
 		18D163612CDA038E004DEA09 /* ExpenseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163602CDA038E004DEA09 /* ExpenseListViewModel.swift */; };
 		18D163632CDA03C4004DEA09 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163622CDA03C4004DEA09 /* AddExpenseViewModel.swift */; };
 		18D163652CDA0407004DEA09 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D163642CDA0407004DEA09 /* ExpenseListView.swift */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C2AC422CDB7F830001DED2 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		18C2AC442CDC9F420001DED2 /* ExpenseListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewModelTests.swift; sourceTree = "<group>"; };
+		18C2AC462CDC9F9D0001DED2 /* AddExpenseViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModelTests.swift; sourceTree = "<group>"; };
 		18D1632B2CDA01A6004DEA09 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D1632E2CDA01A6004DEA09 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		18D163322CDA01A6004DEA09 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -51,7 +56,6 @@
 		18D163472CDA01AA004DEA09 /* ExpenseTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D1634B2CDA01AA004DEA09 /* ExpenseTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerUITests.swift; sourceTree = "<group>"; };
 		18D1634D2CDA01AA004DEA09 /* ExpenseTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		18D1635E2CDA0365004DEA09 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		18D163602CDA038E004DEA09 /* ExpenseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewModel.swift; sourceTree = "<group>"; };
 		18D163622CDA03C4004DEA09 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
 		18D163642CDA0407004DEA09 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				18D163412CDA01A9004DEA09 /* ExpenseTrackerTests.swift */,
+				18C2AC442CDC9F420001DED2 /* ExpenseListViewModelTests.swift */,
+				18C2AC462CDC9F9D0001DED2 /* AddExpenseViewModelTests.swift */,
 			);
 			path = ExpenseTrackerTests;
 			sourceTree = "<group>";
@@ -155,7 +161,6 @@
 		18D1635B2CDA0227004DEA09 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				18D1635E2CDA0365004DEA09 /* ExpenseViewModel.swift */,
 				18D163602CDA038E004DEA09 /* ExpenseListViewModel.swift */,
 				18D163622CDA03C4004DEA09 /* AddExpenseViewModel.swift */,
 			);
@@ -168,6 +173,7 @@
 				18D163642CDA0407004DEA09 /* ExpenseListView.swift */,
 				18D163662CDA044A004DEA09 /* AddExpenseView.swift */,
 				18D163682CDA046F004DEA09 /* SummaryView.swift */,
+				18C2AC422CDB7F830001DED2 /* PieChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,10 +326,10 @@
 			files = (
 				18D163752CDA2F09004DEA09 /* DateFormatter.swift in Sources */,
 				18D163612CDA038E004DEA09 /* ExpenseListViewModel.swift in Sources */,
-				18D1635F2CDA0365004DEA09 /* ExpenseViewModel.swift in Sources */,
 				18D163672CDA044A004DEA09 /* AddExpenseView.swift in Sources */,
 				18D163332CDA01A6004DEA09 /* Expense.swift in Sources */,
 				18D163652CDA0407004DEA09 /* ExpenseListView.swift in Sources */,
+				18C2AC432CDB7F830001DED2 /* PieChartView.swift in Sources */,
 				18D1632F2CDA01A6004DEA09 /* ExpenseTrackerApp.swift in Sources */,
 				18D163632CDA03C4004DEA09 /* AddExpenseViewModel.swift in Sources */,
 				18D163692CDA046F004DEA09 /* SummaryView.swift in Sources */,
@@ -335,6 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D163422CDA01A9004DEA09 /* ExpenseTrackerTests.swift in Sources */,
+				18C2AC452CDC9F420001DED2 /* ExpenseListViewModelTests.swift in Sources */,
+				18C2AC472CDC9F9D0001DED2 /* AddExpenseViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,8 +503,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,9 +512,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TCS.ExpenseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -523,8 +533,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,9 +542,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TCS.ExpenseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

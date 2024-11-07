@@ -22,6 +22,7 @@ struct ExpenseListView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
+                .accessibilityIdentifier("GroupingPicker")
                 
                 List {
                     ForEach(viewModel.groupExpenses(by: selectedGrouping).sorted(by: { $0.key > $1.key }), id: \.key) { (section, expenses) in
@@ -30,18 +31,34 @@ struct ExpenseListView: View {
                                 VStack(alignment: .leading) {
                                     Text(expense.category)
                                         .font(.headline)
-                                    Text("Amount: \(expense.amount, specifier: "%.2f")")
+                                        .accessibilityIdentifier("ExpenseCategoryText")
+                                    
+                                    Text("Amount: \(expense.amount, specifier: "%.f")")
                                         .font(.subheadline)
+                                        .accessibilityIdentifier("ExpenseAmountText")
                                 }
                             }
+                            .onDelete { indexSet in
+                                deleteExpense(in: expenses, at: indexSet)
+                            }
                         }
+                        .accessibilityIdentifier("ExpenseSection_\(section)")
                     }
                 }
                 .navigationTitle("Expenses")
+                .accessibilityIdentifier("ExpenseList")
                 .onAppear {
                     viewModel.fetchExpenses(using: modelContext)
                 }
             }
         }
+    }
+    
+    private func deleteExpense(in expenses: [Expense], at offsets: IndexSet) {
+        offsets.forEach { index in
+            let expenseToDelete = expenses[index]
+            viewModel.deleteExpense(expenseToDelete, using: modelContext)
+        }
+        viewModel.fetchExpenses(using: modelContext) // Refresh the list after deletion
     }
 }

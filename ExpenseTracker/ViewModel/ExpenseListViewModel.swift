@@ -20,6 +20,11 @@ class ExpenseListViewModel: ObservableObject {
         }
     }
     
+    func deleteExpense(_ expense: Expense, using context: ModelContext) {
+           context.delete(expense)
+           try? context.save()
+       }
+    
     func groupExpenses(by component: Calendar.Component) -> [String: [Expense]] {
         var groupedExpenses = [String: [Expense]]()
         

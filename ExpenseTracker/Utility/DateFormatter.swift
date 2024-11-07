@@ -16,7 +16,7 @@ extension DateFormatter {
     
     static var monthFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM yyyy"
+        formatter.dateFormat = "MMM yyyy"
         return formatter
     }
     
